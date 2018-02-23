@@ -1,3 +1,32 @@
+CoderPad + Markdown
+===================
+
+Welcome to a real-time collaborative [Markdown][1] editor.
+
+In addition to all the usual Markdown features, it uses
+[Github-Flavored Markdown][2], except with breaks on newlines
+disabled.
+
+Arbitrary HTML input is disabled, for obvious security reasons,
+and "smart" quotes are enabled.
+
+We also support code fencing, through either backticks or
+indentation.
+
+```javascript
+function hello() {
+  var s = "Hi there!";
+  console.log(s);
+}
+```
+
+[1]: http://daringfireball.net/projects/markdown/
+[2]: https://help.github.com/articles/github-flavored-markdown
+
+
+
+Your previous Plain Text content is preserved below:
+
 ## Preamble
 
   NMP: NMP-3
@@ -132,42 +161,67 @@ is covered in the sections below.
 
 ### Incremental lifting of restrictions
 
-Depending on processes dicated by the methodology associated with a retired CRC,
+Depending on processes dictated by the methodology associated with a retired CRC,
 the short-term estimation error of that retired CRC can decrease.
 
 When the short-term estimation error of a retired CRC is reduced, then the quantity
 of restricted NORI tokens transfered during the sale of that CRC will be reduced
 by the same amount by lifting restriction on some of those tokens.
 
+For example, when 100 NORI tokens are exchanged for 100 CRCs with a +/- 40% short-term
+estimation error, 40 of those NORI tokens will be restricted upon deliver to the
+supplier. If after auditing, or some other process, that estimation error is reduced
+10%, the restriction will be lifted on 30 of the NORI tokens.
+
+_Note_: It's possible that the lowest acheivable estimation error will be greater
+than +/- 0%, and we need to make sure that aspect is communicated.
+
 ### Surplus CRC Creation
 
-... todo ...
+In the event that final auditing indicates that more CO2 was removed and stored
+than was reflected in the historical CRC generation, then additional CRCs will
+be created.
+
+These surplus CRCs will be tier-1 rated, and will be immediately tradeable.
+
+These surplus CRCs will be split between the original supplier and
+the [market risk mitigation account](section-???).
+
+_Note_: The exact amount that is split between supplier and market risk
+mitigation account still needs to be determined and may be dependent
+on market dynamics, methodology, specific projects, etc.
+
+_Note_: One way to calculate the split between supplier and mitigation account
+is based on the size of the mitigation account. As it gets bigger, the
+suppliers of a surplus retain more of the surplus.
 
 ### Deficit Settlement process
 
-... todo ...
+In the event that final auditing indicates that _less_ CO2 was removed and stored
+than was reflected in the historical CRC generation, then the remaining restricted
+NORI tokens will be used to purchase and retire additional CRCs.
 
+If there are not enough remaining NORI tokens to cover the deficit, then
+additional CRCs from the [market risk mitigation account](section-???) will
+be retired to coer the rest.
 
-_Below is some language we might use in writing the above:_
+_Note_: The only time the purchase of a CRC does not result in that CRC
+being retired is when the purchase is performed by the market risk mitigation
+account.
 
-If a qualified audit report suggests more CO2 has been removed
-and stored in the Project soils and above-ground biomass than was
-previously recognized in CRCs, the Supplier can claim up to 50%
-of the suggested CRC surplus, as CRC1s, which they can now exchange.
+For example:
 
-Nori will receive the remaining 50% of the surplus as unretrcited CRC1s
-to self-insure against [possible future deficits](explanation).
+100 CRCs
+--> 60 unrestricted NORI, 40 restricted NORI
+--> audit says only 70 TCO2e were done (30 CRC deficit)
+--> 70 unrestricted NORI, 30 restricted NORI
+--> 30 restricted NORI used to retire 30 additional CRCs to cover the deficit
 
-If/when a Supplier instructs Nori to transfer CRC1s to a Buyer's account,
-the CRC1s will be immediately retired and an equivalent number of NORI
-tokens will be deposited in the Supplier's Unrestricted token account.
-
-If the qualified audit report suggests less CO2 was removed and stored than total
-historical CRC claims, Nori shall reclaim and return to Nori's treasury,
-NORI tokens in Supplier's related Restricted token account up to a limit
-equal to the estimated over-issuance of CRCs. Any NORI tokens remaining
-in the Supplier's Restricted token account will be immediately transferred
-to the Supplier's Unrestricted token account.
+100 CRCs
+--> 60 unrestricted NORI, 40 restricted NORI
+--> audit says only 50 TCO2e were done (50 CRC deficit)
+--> remaining 40 restricted NORI used to retire 40 additional CRCs to cover the deficit
+--> additional 10 CRCs retired from the risk mitigation account
 
 _Note_: These are "strawdog discount
 rates. We need to talk about different verification standards, what
