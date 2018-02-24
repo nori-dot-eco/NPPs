@@ -1,32 +1,3 @@
-CoderPad + Markdown
-===================
-
-Welcome to a real-time collaborative [Markdown][1] editor.
-
-In addition to all the usual Markdown features, it uses
-[Github-Flavored Markdown][2], except with breaks on newlines
-disabled.
-
-Arbitrary HTML input is disabled, for obvious security reasons,
-and "smart" quotes are enabled.
-
-We also support code fencing, through either backticks or
-indentation.
-
-```javascript
-function hello() {
-  var s = "Hi there!";
-  console.log(s);
-}
-```
-
-[1]: http://daringfireball.net/projects/markdown/
-[2]: https://help.github.com/articles/github-flavored-markdown
-
-
-
-Your previous Plain Text content is preserved below:
-
 ## Preamble
 
   NMP: NMP-3
